@@ -1,0 +1,18 @@
+{
+  "name": "sasha/mvc",
+  "authors": [
+    {
+      "name": "Nils Adermann",
+      "email": "naderman@naderman.de",
+      "homepage": "https://www.naderman.de",
+      "role": "Developer"
+  }
+],
+  "autoload": {
+    "psr-4": {
+      "app\\":"./"
+    }
+  },
+  "require": {}
+  
+}
