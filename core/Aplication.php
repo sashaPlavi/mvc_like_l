@@ -1,6 +1,6 @@
 <?php
 
-namespace app\core;
+namespace App\Core;
 
 
 class Aplication
@@ -10,5 +10,9 @@ class Aplication
   public function __construct()
   {
     $this->router = new Router;
+  }
+  public function run()
+  {
+    $this->router->resolve();
   }
 }

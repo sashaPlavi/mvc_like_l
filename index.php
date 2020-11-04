@@ -1,13 +1,16 @@
 <?php
-echo phpversion();
 
-require_once './core/Router.php';
+use App\Core\Aplication;
 
-use app\core;
+require_once  __DIR__ . '/vendor/autoload.php';
 
 
-$app = new Aplication();
 
-$app->router->get('/', function(){
+
+
+$app =  new Aplication();
+
+$app->router->get('/', function () {
   return 'halo bre!';
-})
+});
+$app->router->resolve();

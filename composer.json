@@ -8,9 +8,10 @@
       "role": "Developer"
   }
 ],
+"description": "blablatruc",
   "autoload": {
     "psr-4": {
-      "app\\":"./"
+      "App\\":"./"
     }
   },
   "require": {}
