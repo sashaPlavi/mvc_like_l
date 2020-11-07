@@ -25,8 +25,10 @@ class Router
     $method = $this->request->getMethod();
     // echo $method . '</br>';
     $callback = $this->routes[$method][$path] ?? false;
+    var_dump($this->routes[$method][$path]);
     if ($callback === false) {
       echo 'not found';
+      //var_dump($_SERVER);
       exit;
     }
 

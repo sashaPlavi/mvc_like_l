@@ -1,7 +1,9 @@
 RewriteEngine On
 RewriteBase /mvc_like_l/
-
-RewriteCond %{THE_REQUEST} /public/([^\s?]*) [NC]
-RewriteRule ^ %1 [L,NE,R=302]
-
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^((?!public/).*)$ public/$1 [L,NC]
+
+RewriteRule . index.php [L,QSA]
+ 
+ 

@@ -6,9 +6,13 @@ class Request
 {
   public function getPath()
   {
-    $path = $_SERVER['REQUEST_URI'] ?? '/';
+    $path = $_SERVER['REQUEST_URI'];
+    $path = substr($path, 1, strlen($path));
+    $slashpos = strpos($path, '/');
+    $path = substr($path, $slashpos, strlen($path));
+    //echo $path;
     $position = strpos($path, '?');
-    //echo $position;
+    // echo $position;
     if ($position === false) {
       return $path;
     }
